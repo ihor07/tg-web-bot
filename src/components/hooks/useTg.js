@@ -1,6 +1,6 @@
 const tg = window.Telegram.WebApp
 
-export function useTg() {
+export function useTelegram() {
   const onClose = () => {
     tg.close()
   }
@@ -16,6 +16,6 @@ export function useTg() {
     onClose,
     onToggleButton,
     tg,
-    user: tg.initDataUnsafe?.user,
+    user: tg.initDataUnsafe.user,
   }
 }
