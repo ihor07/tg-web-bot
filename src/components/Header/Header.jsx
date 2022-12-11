@@ -1,6 +1,6 @@
 import { on } from 'nodemon'
 import Button from '../Button/Button'
-import { useTg } from '../../hooks/useTg'
+import { useTg } from '../hooks/useTg'
 import React from 'react'
 
 const Header = () => {
