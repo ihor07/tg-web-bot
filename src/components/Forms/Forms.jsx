@@ -32,7 +32,7 @@ const Forms = () => {
     setSubject(el.target.value)
   }
   return (
-    <div className={'forms'}>
+    <div className={'form'}>
       <h3>Input your info</h3>
       <input
         className={'input'}
