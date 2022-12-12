@@ -5,7 +5,7 @@ import { useTelegram } from '../hooks/useTg'
 const Forms = () => {
   const [country, setCountry] = useState('')
   const [street, setStreet] = useState('')
-  const [subject, setSubject] = useState('')
+  const [subject, setSubject] = useState('physic')
   const { tg } = useTelegram()
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const Forms = () => {
         value={street}
         onChange={onChangeStreet}
       />
-      <select value={subject} onChange={onChangeStreet} className={'select'}>
+      <select value={subject} onChange={onChangeSubject} className={'select'}>
         <option value={'physic'}>physical</option>
         <option value={'legal'}>legal</option>
       </select>
