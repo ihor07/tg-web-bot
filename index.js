@@ -11,14 +11,20 @@ bot.on('message', async (msg) => {
   const text = msg.text
 
   if (text === '/start') {
-    await bot.sendMessage(chatId, 'User Form', {
+    await bot.sendMessage(chatId, 'Now show button, fill in form', {
       reply_markup: {
-        inline_keyboard: [
-          [{ text: 'Make Order', web_app: { url: webAppUrl } }],
+        keyboard: [
+          [{ text: 'Fill in form', web_app: { url: webAppUrl + '/form' } }],
         ],
       },
     })
   }
+
+  await bot.sendMessage(chatId, 'Go to the our internet shop', {
+    reply_markup: {
+      inline_keyboard: [[{ text: 'Make Order', web_app: { url: webAppUrl } }]],
+    },
+  })
 
   bot.sendMessage(chatId, 'Received your message')
 })
