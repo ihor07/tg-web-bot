@@ -5,6 +5,8 @@ import { useTelegram } from '../hooks/useTg'
 const Forms = () => {
   const [country, setCountry] = useState('')
   const [street, setStreet] = useState('')
+  const [name, setName] = useState('')
+  const [numTelephone, setNumTelephone] = useState('')
   const [subject, setSubject] = useState('physic')
   const { tg } = useTelegram()
 
@@ -13,9 +15,11 @@ const Forms = () => {
       country,
       street,
       subject,
+      name,
+      numTelephone,
     }
     tg.sendData(JSON.stringify(data))
-  }, [country, street, subject])
+  }, [country, street, name, numTelephone, subject])
 
   useEffect(() => {
     tg.onEvent('mainButtonClicked', onSendData)
@@ -44,6 +48,12 @@ const Forms = () => {
   const onChangeStreet = (el) => {
     setStreet(el.target.value)
   }
+  const onChangeName = (el) => {
+    setName(el.target.value)
+  }
+  const onChangeNumTelephone = (el) => {
+    setNumTelephone(el.target.value)
+  }
   const onChangeSubject = (el) => {
     setSubject(el.target.value)
   }
@@ -63,6 +73,20 @@ const Forms = () => {
         placeholder={'Street'}
         value={street}
         onChange={onChangeStreet}
+      />
+      <input
+        className={'input'}
+        type="text"
+        placeholder={'Your name'}
+        value={name}
+        onChange={onChangeName}
+      />
+      <input
+        className={'input'}
+        type="text"
+        placeholder={'Your number telephone'}
+        value={numTelephone}
+        onChange={onChangeNumTelephone}
       />
       <select value={subject} onChange={onChangeSubject} className={'select'}>
         <option value={'physic'}>Physical</option>
