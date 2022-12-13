@@ -5,7 +5,7 @@ import ProductItem from '../ProductItem/ProductItem'
 import './ProductList.css'
 
 const products = [
-  { id: '1', title: 'Cars', price: 9000 $, description: 'BMW 320 F30' },
+  { id: '1', title: 'Cars', price: 9000`$`, description: 'BMW 320 F30' },
   { id: '2', title: 'Kick scooter', price: 1000, description: 'Xiaomi 10' },
   { id: '3', title: 'Moto', price: 5000, description: 'Honda CBR' },
   { id: '4', title: 'Bike', price: 3000, description: 'Giant 29 DH' },
