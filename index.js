@@ -26,5 +26,20 @@ bot.on('message', async (msg) => {
     },
   })
 
+  if (msg?.web_app_data?.data) {
+    try {
+      const data = JSON.parse(msg?.web_app_data?.data)
+
+      await bot.sendMessage(chatId, 'Thanks from feedback')
+      await bot.sendMessage(chatId, 'Your country' + data?.country)
+      await bot.sendMessage(chatId, 'Your street' + data?.street)
+
+      setTimeout(async () => {
+        await bot.sendMessage(chatId, 'All information in this chat')
+      }, 3000)
+    } catch (el) {
+      console.log(el)
+    }
+  }
   //  bot.sendMessage(chatId, 'Received your message')
 })
