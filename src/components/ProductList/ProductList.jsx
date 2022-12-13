@@ -5,14 +5,14 @@ import ProductItem from '../ProductItem/ProductItem'
 import './ProductList.css'
 
 const products = [
-  { id: '1', title: 'Cars', price: `9000$`, description: 'BMW 320 F30' },
-  { id: '2', title: 'Kick scooter', price: `1000$`, description: 'Xiaomi 10' },
-  { id: '3', title: 'Moto', price: `5000$`, description: 'Honda CBR' },
-  { id: '4', title: 'Bike', price: `3000$`, description: 'Giant 29 DH' },
-  { id: '5', title: 'Snowboard', price: `600$`, description: 'China, 175cm' },
-  { id: '6', title: 'Skis', price: `1100$`, description: 'Atomic pro 170cm' },
-  { id: '7', title: 'Rollers', price: `190$`, description: 'noName' },
-  { id: '8', title: 'Unicycle', price: `500$`, description: 'China 600w' },
+  { id: '1', title: 'Cars', price: 9000, description: 'BMW 320 F30' },
+  { id: '2', title: 'Kick scooter', price: 1000, description: 'Xiaomi 10' },
+  { id: '3', title: 'Moto', price: 5000, description: 'Honda CBR' },
+  { id: '4', title: 'Bike', price: 3000, description: 'Giant 29 DH' },
+  { id: '5', title: 'Snowboard', price: 600, description: 'China, 175cm' },
+  { id: '6', title: 'Skis', price: 1100, description: 'Atomic pro 170cm' },
+  { id: '7', title: 'Rollers', price: 190, description: 'noName' },
+  { id: '8', title: 'Unicycle', price: 500, description: 'China 600w' },
 ]
 
 const getTotalPrice = (items) => {
